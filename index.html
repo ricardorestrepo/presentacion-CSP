@@ -154,9 +154,104 @@
 					</section>
 
 					<aside class="notes">
-						El término propiedad B viene de Erdos en referencia a Bernstein. 
+						El término propiedad B viene de Erdos en referencia a Bernstein.
 					</aside>
 
+				</section>
+
+				<!--2- coloramiento en grafos aleatorios-->
+				<section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								Un hipergrafo aleatorio $H_k(n,m)$ es un hipergrafo $k$-uniforme con $n$ vértices
+								y $m(n)$ aristas aleatorias escogidas de manera independente e uniforme entre todas las posibles
+								$k$-tuplas de vértices.
+							</li>
+							<li class="fragment roll-in">
+								Una propiedad de hipergrafos $P$ se dice que es satisfecha con alta probabilidad en el nivel $m(n)$ de aristas
+								si
+								\[
+								\mbox{lim}_{n \to \infty} \mathbf{P}[H_k(n,m) \mbox{ satisface } P ] = 1
+								\]
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								Alon Spencer "The strange logic of random graphs". Propiedades de primer orden:
+								Cerradas bajo inferencia lógica. Completez en ciertos casos de $m(n)$ (Ley $0$/$1$).
+							</li>
+							<li class="fragment roll-in">
+								Conectividad o colorabilidad no son expresables en primer orden. ¿Otros lenguajes?
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								Umbral fino: Conectividad.
+							</li>
+							<li class="fragment roll-in">
+								Umbral grueso: Existencia de un subgrafo 'pequeño'.
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								Ehud Friedgut y Jean Bourgain: Sharp thresholds of graph properties (1999)
+							</li>
+							<li class="fragment roll-in">
+								Si una propiedad monótona tiene un umbral grueso, entonces puede ser aproximada
+								por la propiedad de tener un subgrafo pequeño adecuado.
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								La propiedad B tienen un umbral fino.
+							</li>
+							<li class="fragment roll-in">
+								Localizar tal umbral.
+							</li>
+							<li class="fragment roll-in">
+								Estudiar umbral para propiedades del tipo: `La propiedad B es P'.
+							</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<!--Sobre lema local de Lovasz-->
+				<section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<ul>
+							<li class="fragment roll-in">
+								Lovasz, Erdos: Sean $A_1$, \ldots, $A_t$ eventos con probabilidad acotada por $p$
+								y tal que cada uno de ellos es independiente a todos los demás, excepto $d$ de ellos, entonces si
+								\[ep(d + 1) < 1 \]
+								con probabilidad positiva ninguno de los eventos ocurre.
+							</li>
+							<li class="fragment roll-in">
+								Alon y Spencer: Si $m(n) = \Omega(2^k n /k^2)$ entonces $H_k(n,m)$ es $2$-coloreable.
+							</li>
+						</ul>
+					</section>
 				</section>
 
 				<!-- Example of nested vertical slides -->
