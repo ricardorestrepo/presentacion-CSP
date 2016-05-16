@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Transiciones de fase en problemas computacionales aleatorios</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="author" content="Ricardo Restrepo">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -20,6 +20,22 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--Configuracion de mathjax-->
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript" async
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+		</script>
+
+		<!--Configuración de bootstrap-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -81,13 +97,66 @@
 					</section>
 				</section>
 
-
-
+				<!--Ejemplo prototipico: 2 coloramiento de hipergrafos-->
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<section>
+						<h2>2-coloramiento de hipergrafos</h2>
+						<p>
+							Un hipergrafo es una generalización del concepto de grafo, en el que una arista puede conectar cualquier número de
+							vértices:
+							<div class="row">
+								<div class="col-md-6">
+									<ul>
+										<li class="fragment roll-in"> Sistema de conjuntos (Teoría de Sperner) </li>
+										<li class="fragment roll-in"> estructura de incidencia (geometría combinatorial</li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<img src="images/hipergrafo.png" alt="Hipergrafo" style="width:304px;height:228px;">
+								</div>
+
+							</div>
+
+							<div class="fragment roll-in">
+								Aparecen en geometría computacional,
+								teoría de preferencias sociales, topología (complejos simpliciales abstractos).
+							</div>
+						</p>
+						</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos</h2>
+						<p class="fragment roll-in">
+							Un hipergrafo es $k$ uniforme si cada arista es una $k$-tupla de vértices (no necesariamente diferentes).
+						</p>
+						<div class="fragment roll-in">
+							<div class="row">
+								<div class="col-md-6">
+									Un $\lambda$-coloramiento de un hipergrafo es una asignación de colores del conjunto $\{1,\ldots, \lambda\}$
+									a los vértices del hipergrafo del tal manera que no hayan aristas monocromáticas.
+								</div>
+								<div class="col-md-6">
+									<img src="images/2coloring.png" alt="Hipergrafo">
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos</h2>
+						<p class="fragment roll-in">
+							La propiedad de ser 2-coloreable (propiedad B) ha sido estudiada desde el trabajo de Bernstein
+							en 1908 en hipergrafos infinitos.
+						</p>
+						<p class="fragment roll-in">
+							Es NP-completo (Laslo Lovasz, 1973).
+						</p>
+					</section>
+
+					<aside class="notes">
+						El término propiedad B viene de Erdos en referencia a Bernstein. 
+					</aside>
+
 				</section>
 
 				<!-- Example of nested vertical slides -->
