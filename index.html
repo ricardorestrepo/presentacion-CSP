@@ -108,7 +108,7 @@
 								<div class="col-md-6">
 									<ul>
 										<li class="fragment roll-in"> Sistema de conjuntos (Teoría de Sperner) </li>
-										<li class="fragment roll-in"> estructura de incidencia (geometría combinatorial</li>
+										<li class="fragment roll-in"> Estructura de incidencia (Geometría combinatorial)</li>
 									</ul>
 								</div>
 								<div class="col-md-6">
@@ -149,7 +149,9 @@
 							en 1908 en hipergrafos infinitos.
 						</p>
 						<p class="fragment roll-in">
-							Es NP-completo (Laslo Lovasz, 1973).
+							El problema de decisión es NP-completo
+							<br>
+							(Laslo Lovasz, 1973).
 						</p>
 					</section>
 
@@ -164,29 +166,28 @@
 
 					<section>
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
-						<ul>
-							<li class="fragment roll-in">
-								Un hipergrafo aleatorio $H_k(n,m)$ es un hipergrafo $k$-uniforme con $n$ vértices
-								y $m(n)$ aristas aleatorias escogidas de manera independente e uniforme entre todas las posibles
-								$k$-tuplas de vértices.
-							</li>
-							<li class="fragment roll-in">
-								Una propiedad de hipergrafos $P$ se dice que es satisfecha con alta probabilidad en el nivel $m(n)$ de aristas
-								si
-								\[
-								\mbox{lim}_{n \to \infty} \mathbf{P}[H_k(n,m) \mbox{ satisface } P ] = 1
-								\]
-							</li>
-						</ul>
+						Un hipergrafo aleatorio $H_k(n,m)$ es un hipergrafo $k$-uniforme con $n$ vértices
+						y $m(n)$ aristas aleatorias escogidas de manera independente e uniforme entre todas las posibles
+						$k$-tuplas de vértices.
 					</section>
 
 					<section>
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+							Una propiedad de hipergrafos $P$ se dice que se satisface <em>con alta probabilidad</em> en el nivel $m(n)$ de aristas
+							si
+							\[
+							\mbox{lim}_{n \to \infty} \mathbf{P}[H_k(n,m) \mbox{ satisface } P ] = 1
+							\]
+					</section>
+
+					<section>
+						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						Alon Spencer "The strange logic of random graphs".
 						<ul>
 							<li class="fragment roll-in">
-								Alon Spencer "The strange logic of random graphs". Propiedades de primer orden:
-								Cerradas bajo inferencia lógica. Completez en ciertos casos de $m(n)$ (Ley $0$/$1$).
+							Propiedades de primer orden son cerradas bajo inferencia lógica.
 							</li>
+							<li class="fragment roll-in">Completez en ciertos casos de $m(n)$ (Ley $0$/$1$).</li>
 							<li class="fragment roll-in">
 								Conectividad o colorabilidad no son expresables en primer orden. ¿Otros lenguajes?
 							</li>
@@ -195,6 +196,7 @@
 
 					<section>
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						Umbral de satisfabilidad.
 						<ul>
 							<li class="fragment roll-in">
 								Umbral fino: Conectividad.
@@ -207,10 +209,8 @@
 
 					<section>
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						Ehud Friedgut y Jean Bourgain: Sharp thresholds of graph properties (1999)
 						<ul>
-							<li class="fragment roll-in">
-								Ehud Friedgut y Jean Bourgain: Sharp thresholds of graph properties (1999)
-							</li>
 							<li class="fragment roll-in">
 								Si una propiedad monótona tiene un umbral grueso, entonces puede ser aproximada
 								por la propiedad de tener un subgrafo pequeño adecuado.
@@ -220,15 +220,14 @@
 
 					<section>
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						La propiedad B no puede ser aproximada por la propiedad de tener un grafo pequeño adecuado <br>
+						(Entonces tiene un umbral fino!).
 						<ul>
 							<li class="fragment roll-in">
-								La propiedad B tienen un umbral fino.
+								Localizar tal umbral. (Esto haría el problema de decisión, 'trivial')
 							</li>
 							<li class="fragment roll-in">
-								Localizar tal umbral.
-							</li>
-							<li class="fragment roll-in">
-								Estudiar umbral para propiedades del tipo: `La propiedad B es P'.
+								Estudiar umbral para propiedades del tipo: "El algoritmo $\mathbf{A}$ halla un 2-coloramiento del grafo en tiempo $O(n^d)$".
 							</li>
 						</ul>
 					</section>
@@ -240,19 +239,25 @@
 
 					<section>
 						<h2>El lema local de Lovasz</h2>
+						Lovasz, Erdos (1973, 1975, 1977):
 						<ul>
 							<li class="fragment roll-in">
-								Lovasz, Erdos: Sean $A_1, \ldots, A_t$ eventos con probabilidad acotada por $p$
-								y tal que cada uno de ellos es independiente a todos los demás, excepto $d$ de ellos, entonces si
-								\[ep(d + 1) < 1 \]
-								con probabilidad positiva ninguno de los eventos ocurre.
+								Sean $A_1, \ldots, A_t$ eventos con probabilidad acotada por $p$.
+							</li>
+							<li class="fragment roll-in">
+								Cada uno de ellos es independiente del álgbera de eventos generada por todos los demás
+								<em>excepto a lo más</em>  $d$ de ellos.
+							</li>
+							<li class="fragment roll-in">
+								Entonces, si $ep(d + 1) < 1 $, con probabilidad positiva, ninguno de los eventos ocurre.
 							</li>
 						</ul>
 
 						<aside class="notes">
 							Olvidemonos de hipergrafos aleatorios.
 							Principio del palomar con esteroides.
-							Desarrollo en el tablero.
+							Desarrollo en el tablero para el caso de 2-coloramientos.
+							Explicar que significa que con probabilidad positiva ninguno de los eventos ocurra.
 						</aside>
 					</section>
 
@@ -274,13 +279,13 @@
 				<section>
 
 					<section>
-						<h2>2-coloramiento de hipergrafos aleatorios</h2>
+						<h2>Método del primer momento</h2>
 						<ul>
 							<li class="fragment roll-in">
-								Si $X\geq 0$ entonces $P(X\geq 1) \leq \mathbf{E}[X]$
+								Desigualdad de Markov: Si $X\geq 0$ entonces $P(X\geq 1) \leq \mathbf{E}[X]$
 							</li>
 							<li class="fragment roll-in">
-								Alon y Spencer: Si $m(n) = c 2^k n$ con $c > \log(2) / 2$, entonces $H_k(n,m)$ <em>no</em>  es $2$-coloreable.
+								Alon y Spencer: Si $m(n) = rn $ con $r> 2^{k-1} \ln{2} - \ln{2}/2$, entonces $H_k(n,m)$ <em>no es</em> $2$-coloreable.
 							</li>
 						</ul>
 
@@ -290,6 +295,120 @@
 					</section>
 
 			</section>
+
+			<!--El método del segundo momento-->
+			<section>
+
+				<section>
+					<h2>Método del segundo momento</h2>
+					<ul>
+						<li class="fragment roll-in">
+							Desigualdad de Paley-Zygmund: Si $X\geq 0$ entonces $P(X > 0) \geq \frac{()\mathbf{E}[X])^2}{\mathbf{E}[X^2]}$.
+						</li>
+						<li class="fragment roll-in">
+							Achlioptas, Moore (2002): Si $m(n) = rn $ con $r < 2^{k-1} \ln{2} - \ln{2}/2 - (1 + \o_k(1)) / 2$, entonces $H_k(n,m)$ <em>es</em> $2$-coloreable.
+						</li>
+					</ul>
+
+					<aside class="notes">
+						Desarrollo en el tablero
+					</aside>
+				</section>
+
+		</section>
+
+		<!--El método del segundo momento-->
+		<section>
+
+			<section>
+				<h2>Algoritmos</h2>
+				<ul>
+					<li class="fragment roll-in">
+							Algoritmo CR. (Chvátal, Reed):
+								<ol>
+									<li class="fragment roll-in">Si hay aristas monocromáticas coloreadas parcialmente con $k-1$ o $k-2$ vértices:</li>
+										<ul>
+												<li class="fragment roll-in">Sea $v$ el vértice no coloreado más pequeño de la arista más pequeña con la propiedad anterior.</li>
+												<li class="fragment roll-in">Coloree $v$ de tal manera que la arista $e$ sea bicromática.</li>
+										</ul>
+									<li class="fragment roll-in">Si no hay tales aristas:</li>
+										<ul>
+												<li class="fragment roll-in">Coloree los vértices no coloreados más pequeños, $v$ y $w$ de rojo y azul respectivamente. </li>
+										</ul>
+								</ol>
+					</li>
+					<li class="fragment roll-in">
+						Achlioptas, Moore (2002): Si $m(n) = rn $ con $r < 2^{k-1} \ln{2} - \ln{2}/2 - (1 + \o_k(1)) / 2$, entonces $H_k(n,m)$ <em>es</em> $2$-coloreable.
+					</li>
+				</ul>
+
+				<aside class="notes">
+					Desarrollo en el tablero
+				</aside>
+			</section>
+
+			<section>
+				<h2>Algoritmos</h2>
+				<ul>
+					<li>
+							Algoritmo CR. (Chvátal, Reed):
+					</li>
+					<li class="fragment roll-in">
+						(Achlioptas, Kim, Krivelevich, Tetali) (2000): Si $m(n) > \Omega(2^k n /k )$ la propiedad 'ser coloreable con el algoritmo CR' se satisface con alta probabilidad.
+					</li>
+				</ul>
+
+				<aside class="notes">
+					Desarrollo en el tablero
+				</aside>
+			</section>
+
+			<section>
+				<h2>Algoritmos</h2>
+				<ul>
+					<li>
+						Versión algorítmica del lema Local de Lovasz: Beck (91), Alon (91),
+						Molloy, Reed (98), Czumaj, Scheideler (00), Srinivasan (08), Moser, Tardos (08, 09).
+					</li>
+				</ul>
+
+				<aside class="notes">
+					Los eventos deben ser representados en un álgebra de conjuntos independientes. La complejidad
+					es proporcional al número de eventos.
+				</aside>
+			</section>
+
+			<section>
+				<h2>Algoritmos</h2>
+				<ul>
+					<li class="fragment roll-in">
+						Eliminación (Peeling, core): Pittel, Spencer, Wormald (96).
+						Janson (2011).
+					</li>
+					<li class="fragment roll-in"> Para problemas de satisfacción: Montanari, Restrepo, Tetali (2011),
+							 Molloy, Restrepo (2012).
+					</li>
+					<li class="fragment roll-in"> Si $m(n) \geq \Omega(\alpha_k 2^k / k)$ entonces el core es vacío y el proceso de eliminación siempre halla un coloramiento.
+					</li>
+					<li class="fragment roll-in"> Métodos:
+						<ol>
+								<li class="fragment roll-in">Aproximación por ecuaciones diferenciales (Wormald)</li>
+								<li class="fragment roll-in">Acoplamiento con procesos de Poisson (Janson) </li>
+								<li class="fragment roll-in">Desigualdad de Azuma.
+									\[P(X_N - X_0 \geq t) \leq \exp\left ({-t^2 \over 2 \sum_{k=1}^N c_k^2} \right).\] </li>
+						</ol>
+
+					</li>
+				</ul>
+
+				<aside class="notes">
+					Hacer el argumento en el tablero
+				</aside>
+			</section>
+
+
+
+		</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
