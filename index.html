@@ -88,10 +88,9 @@
 						<p>
 							En esta charla exhibiremos:
 							<ul>
-								<li class="fragment highlight-blue"> Resultados.</li>
-								<li class="fragment highlight-blue"> Técnicas.</li>
-								<li class="fragment highlight-blue"> Solubilidad y complejidad algorítmica.</li>
-								<li class="fragment highlight-blue"> Como modelo prototípico seguiremos 2-coloramiento de hipergrafos.</li>
+								<li class="fragment roll-in"> Algunos resultados y técnicas.</li>
+								<li class="fragment roll-in"> Solubilidad y complejidad algorítmica.</li>
+								<li class="fragment roll-in"> Como modelo prototípico usaremos 2-coloramiento de hipergrafos.</li>
 							</ul>
 						</p>
 					</section>
@@ -245,7 +244,7 @@
 								Sean $A_1, \ldots, A_t$ eventos con probabilidad acotada por $p$.
 							</li>
 							<li class="fragment roll-in">
-								Cada uno de ellos es independiente del álgbera de eventos generada por todos los demás
+								Cada uno de ellos es independiente del álgebra de eventos generada por todos los demás
 								<em>excepto a lo más</em>  $d$ de ellos.
 							</li>
 							<li class="fragment roll-in">
@@ -265,7 +264,7 @@
 						<h2>2-coloramiento de hipergrafos aleatorios</h2>
 						<ul>
 							<li class="fragment roll-in">
-								Alon y Spencer: Si $m(n) = \Omega(2^k n /k^2)$ entonces $H_k(n,m)$ es $2$-coloreable.
+								Alon y Spencer: Existe $c_k$ tal que si $m(n) =  c 2^k n /k^2$ con $c < c_k$ entonces $H_k(n,m)$ es $2$-coloreable.
 							</li>
 						</ul>
 
@@ -303,10 +302,10 @@
 					<h2>Método del segundo momento</h2>
 					<ul>
 						<li class="fragment roll-in">
-							Desigualdad de Paley-Zygmund: Si $X\geq 0$ entonces $P(X > 0) \geq \frac{()\mathbf{E}[X])^2}{\mathbf{E}[X^2]}$.
+							Desigualdad de Paley-Zygmund: Si $X\geq 0$ entonces $$P(X > 0) \geq (\mathbf{E}[X])^2 / \mathbf{E}[X^2].$$
 						</li>
 						<li class="fragment roll-in">
-							Achlioptas, Moore (2002): Si $m(n) = rn $ con $r < 2^{k-1} \ln{2} - \ln{2}/2 - (1 + \o_k(1)) / 2$, entonces $H_k(n,m)$ <em>es</em> $2$-coloreable.
+							Achlioptas, Moore (2002): Si $m(n) = rn $ con $r < 2^{k-1} \log{2} - \log{2}/2 - (1 + o_k(1)) / 2$, entonces $H_k(n,m)$ <em>es</em> $2$-coloreable.
 						</li>
 					</ul>
 
@@ -322,9 +321,9 @@
 
 			<section>
 				<h2>Algoritmos</h2>
+				Algoritmo CR. (Chvátal, Reed):
 				<ul>
 					<li class="fragment roll-in">
-							Algoritmo CR. (Chvátal, Reed):
 								<ol>
 									<li class="fragment roll-in">Si hay aristas monocromáticas coloreadas parcialmente con $k-1$ o $k-2$ vértices:</li>
 										<ul>
@@ -337,8 +336,21 @@
 										</ul>
 								</ol>
 					</li>
+				</ul>
+
+				<aside class="notes">
+					Desarrollo en el tablero
+				</aside>
+			</section>
+
+			<section>
+				<h2>Algoritmos</h2>
+				Algoritmo CR. (Chvátal, Reed):
+				<ul>
 					<li class="fragment roll-in">
-						Achlioptas, Moore (2002): Si $m(n) = rn $ con $r < 2^{k-1} \ln{2} - \ln{2}/2 - (1 + \o_k(1)) / 2$, entonces $H_k(n,m)$ <em>es</em> $2$-coloreable.
+						(Achlioptas, Kim, Krivelevich, Tetali) (2000): Existe $c_k$ tal que
+						si $m(n) > c 2^k n /k$ con $c>c_k$ la propiedad 'el algoritmo CR
+						halla en tiempo lineal un 2-coloramiento' se satisface con alta probabilidad.
 					</li>
 				</ul>
 
@@ -350,26 +362,11 @@
 			<section>
 				<h2>Algoritmos</h2>
 				<ul>
-					<li>
-							Algoritmo CR. (Chvátal, Reed):
-					</li>
 					<li class="fragment roll-in">
-						(Achlioptas, Kim, Krivelevich, Tetali) (2000): Si $m(n) > \Omega(2^k n /k )$ la propiedad 'ser coloreable con el algoritmo CR' se satisface con alta probabilidad.
-					</li>
-				</ul>
-
-				<aside class="notes">
-					Desarrollo en el tablero
-				</aside>
-			</section>
-
-			<section>
-				<h2>Algoritmos</h2>
-				<ul>
-					<li>
 						Versión algorítmica del lema Local de Lovasz: Beck (91), Alon (91),
 						Molloy, Reed (98), Czumaj, Scheideler (00), Srinivasan (08), Moser, Tardos (08, 09).
 					</li>
+					<li class="fragment roll-in">Existe $c_k$ tal que si $m(n) =  c 2^k n /k^2$ con $c < c_k$ entonces $H_k(n,m)$ es $2$-coloreable en tiempo lineal.</li>
 				</ul>
 
 				<aside class="notes">
@@ -390,15 +387,6 @@
 					</li>
 					<li class="fragment roll-in"> Si $m(n) \geq \Omega(\alpha_k 2^k / k)$ entonces el core es vacío y el proceso de eliminación siempre halla un coloramiento.
 					</li>
-					<li class="fragment roll-in"> Métodos:
-						<ol>
-								<li class="fragment roll-in">Aproximación por ecuaciones diferenciales (Wormald)</li>
-								<li class="fragment roll-in">Acoplamiento con procesos de Poisson (Janson) </li>
-								<li class="fragment roll-in">Desigualdad de Azuma.
-									\[P(X_N - X_0 \geq t) \leq \exp\left ({-t^2 \over 2 \sum_{k=1}^N c_k^2} \right).\] </li>
-						</ol>
-
-					</li>
 				</ul>
 
 				<aside class="notes">
@@ -406,7 +394,21 @@
 				</aside>
 			</section>
 
+			<section>
+				<h2>Algoritmos</h2>
+				Estudio del core:
+				<ul>
+						<li class="fragment roll-in">Aproximación por ecuaciones diferenciales (Wormald)</li>
+						<li class="fragment roll-in">Acoplamiento con procesos de Poisson (Janson) </li>
+						<li class="fragment roll-in">Desigualdad de Azuma.
+							 </li>
+				</ul>
 
+				<aside class="notes">
+					Hacer el argumento en el tablero
+					$$P(X_N - X_0 \geq t) \leq \exp (-t^2 / 2 \sum_{k=1}^N c_k^2 ).$$
+				</aside>
+			</section>
 
 		</section>
 
